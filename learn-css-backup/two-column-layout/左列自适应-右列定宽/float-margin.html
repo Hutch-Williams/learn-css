@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float-margin</title>
+    
+    <style>
+        #parent{
+            height: 500px;
+            padding-left: 100px;   /*抵消#left的margin-left以达到#parent水平居中*/
+        }
+
+        #left{
+            width: 100%;
+            float: left;
+            height: 500px;
+            margin-left: -100px;/*正值等于#right的宽度*/
+            background-color: red;
+        }
+
+        #right{
+            width: 100px;
+            float: right;
+            height: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="left"> 左列自适应</div>
+        <div id="right"> 右列固定</div>
+
+    </div>
+    
+</body>
+</html>

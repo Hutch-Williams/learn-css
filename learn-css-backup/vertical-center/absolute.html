@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .wp{
+            position: relative;
+        }
+
+        .box{
+            position:absolute;
+            top: 50%;/*父元素高度一半,这里等同于top:150px;*/
+            margin-top: -50px; /*  或者用 transform: translateY(-50%) 自身高度一半,这里等同于margin-top:-50px*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wp">
+        <div class="box size">123</div>
+    </div>
+    
+</body>
+</html>
