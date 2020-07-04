@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .wp{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .box{
+            /*align-self: center　如果父元素没有设置 align-items: center;*/
+            /* margin: auto 0;  父和子元素都没设置align-items或...self*/
+            /*原理：这个尚未搞清楚，应该是flex使margin上下边界无限延伸至剩余空间并平分了*/
+        }
+    </style>
+
+</head>
+<body>
+        <div class="wp">
+            <div class="box size">123</div>
+            
+        </div>
+</body>
+</html>

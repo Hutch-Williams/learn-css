@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .wp{
+            position: relative;
+        }
+
+        .box{
+            position: absolute;
+            left: 50%;  /*  父元素宽度一般，这里等同于left:100px*/
+            transform: translateX(-50%);/*自身宽度一半，相当于margin-left:-50px　*/
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wp">
+        <div class="box size"></div>
+        
+    </div>
+    
+</body>
+</html>
