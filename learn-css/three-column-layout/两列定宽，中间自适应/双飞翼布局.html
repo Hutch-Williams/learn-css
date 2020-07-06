@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双飞翼布局</title>
+
+    <style> 
+    
+    #header{
+        background-color: gray;
+        height: 60px;
+    }
+
+    #left{
+        width: 100px;
+        margin-left: -100%; /*调整#left的位置,值等于自身宽度*/
+        height: 500px;
+        background-color: red;
+        float: left;
+        opacity: 0.5;  /* 设置 div 元素的不透明级别 默认为1 */
+    }  
+
+
+    #center{
+        width: 100%;
+        float: left;
+        height: 500px;
+        background-color: green;
+    }
+
+    #center_inbox{
+        
+        height: 480px;
+        border: 1px solid black;
+        margin: 0 220px 0 120px; /*关键!!!左右边界等于左右盒子的宽度,多出来的为盒子间隔*/
+    }
+    #right{
+        width: 200px;
+        margin-left: -200px; /*调整#left的位置,值等于自身宽度*/
+        height: 500px;
+        background-color: blue;
+        float: left;
+        opacity: 0.5;
+    } 
+
+    #footer{
+        clear: both; /*注意清除浮动!!*/
+        background-color: gray;
+        height: 60px;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+    <!--中间栏需要放在前面-->
+    <div id='parent'>
+        <div id="center">
+            <div id="center_inbox">中间自适应</div>
+            <hr>  <!--方便观察原理-->
+        </div>
+
+        <div id="left">左列定宽</div>
+        <div id="right">右列定宽</div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

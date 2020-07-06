@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+
+        *{
+            margin: 0; /* 消除旁边的间隙*/
+            padding: 0;
+        }
+        div{
+            border: 1px solid;
+        }
+        html,body,#parent{
+            height: 100%;
+        }
+
+        #parent{
+            display: flex;
+            flex-direction: column;/*  让flex内的元素从上向下浮动*/
+
+        }
+
+        #top{
+            height: 100px;
+        }
+
+
+        #bottom{
+            height: 50px;
+        }
+
+        #middle{
+            display: flex; /* 另外设置一个flex元素包裹
+            left和right元素，让其从左到右排列  */
+            flex: 1;/* 让midlle元素占满一排*/
+        }
+
+        #left{
+            width: 200px;
+        }
+
+        #right{
+            flex: 1; /* 让right元素将剩余空间占满*/
+            overflow: auto;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        <div id="top">top</div>
+        <div id="middle">
+            <div id="left">left</div>
+            <div id="right">right</div>
+        </div>
+    
+    <div id="bottom">bottom</div>
+    </div>
+</body>
+</html>

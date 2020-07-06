@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+</head>
+
+<style>
+    
+    #parent{
+        margin-left: -20px;/*使整体内容看起来居中,抵消padding-left的影响*/
+    }
+    
+    .column{
+        float: left;
+        padding-left: 20px; /*盒子的边距*/
+        width: 25%;
+        height: 500px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        background-clip: content-box; /*背景色从内容开始绘制,方便观察*/
+    }
+    .column:nth-child(odd){/*nth-child(odd) 表示HTML表格中的奇数行。*/
+        background-color: red;
+    }
+    
+    .column:nth-child(even){/* nth-child(even) */
+        background-color: blue;
+    }
+</style>
+<body>
+    
+    <div id="parent">
+        <div class="column">1 <p>我是文本我是文本我是文本我是文本</p></div>
+        <div class="column">2 <p>我是文本我是文本我是文本我是文本</p></div>
+        <div class="column">3 <p>我是文本我是文本我是文本我是文本</p></div>
+        <div class="column">4 <p>我是文本我是文本我是文本我是文本</p></div>
+    </div>
+</body>
+</html>

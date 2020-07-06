@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局</title>
+    
+    <style>
+        #header{
+            height: 60px;
+            background-color: gray;
+        }
+
+        #parent{
+            height: 500px;
+            padding: 0 215px 0 115px; /*为了使#center摆正,左右padding
+            分别等于左右盒子的宽,可以结合左右盒子相对定位的left调整间距*/
+            box-sizing: border-box;
+        }
+
+        #left{
+            width: 100px; 
+            margin-left: -100%; /*使#left上去一行*/
+            background-color: red;
+            height: 500px;
+            left: -115px; /*相对定位调整#left的位置,正值大于或等于自身宽度*/
+            position: relative;
+            float: left;
+        }
+
+        #center{
+            width: 100%; /*由于#parent的padding,达到自适应的目的*/
+            float: left;
+            height: 500px;
+            box-sizing: border-box;
+            /* border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。 */
+            background-color: green;
+            border: 1px solid;
+
+        }
+
+        #right{
+            width: 200px;
+            margin-left: -200px; /*使#right上去一行*/
+            left: 215px; /*相对定位调整#right的位置,大于或等于自身宽度*/
+            position: relative;
+            float: left;
+            background-color: blue;
+            height: 500px;
+        }
+
+        #footer{
+            height: 60px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div id="parent"> 
+        <!--#center需要放在前面-->
+        <div id="center">中间自适应
+            <hr>
+        </div>
+
+        <div id="left"> 左列定宽</div>
+        <div id="right">右列定宽</div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

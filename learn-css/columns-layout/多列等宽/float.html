@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+
+    <style>
+        
+        #parent{
+            height: 500px;
+        }
+
+        .column{
+            float: left;
+            height: 500px;
+            width: 20%;
+            
+        }
+
+        .column:nth-child(odd){
+            background-color: red;
+        }
+
+        .column:nth-child(even){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="column">1 我是文本我是文本我是文本</div>
+        <div class="column">2 我是文本我是文本我是文本</div>
+        <div class="column">3 我是文本我是文本我是文本</div>
+        <div class="column">4 我是文本我是文本我是文本</div>
+        <div class="column">5 我是文本我是文本我是文本</div>
+    
+    </div>
+    
+</body>
+</html>
